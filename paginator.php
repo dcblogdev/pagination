@@ -8,7 +8,7 @@
  */
 class Paginator{
 
-  /**
+        /**
 	 * set the number of items per page.
 	 *
 	 * @var numeric
@@ -100,18 +100,18 @@ class Paginator{
 	 * @return string
 	*/
 	public function get_limit(){
-        return "LIMIT ".$this->get_start().",$this->_perPage";
-    }
+        	return "LIMIT ".$this->get_start().",$this->_perPage";
+        }
 
-    /**
-     * page_links
-     *
-     * create the html links for navigating through the dataset
-     * 
-     * @var sting $path optionally set the path for the link
-     * @var sting $ext optionally pass in extra parameters to the GET
-     * @return string returns the html menu
-    */
+        /**
+         * page_links
+         *
+         * create the html links for navigating through the dataset
+         * 
+         * @var sting $path optionally set the path for the link
+         * @var sting $ext optionally pass in extra parameters to the GET
+         * @return string returns the html menu
+        */
 	public function page_links($path='?',$ext=null)
 	{
 	    $adjacents = "2";
