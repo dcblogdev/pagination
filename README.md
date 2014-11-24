@@ -14,7 +14,7 @@ Paginate record sets, not tied in directly to a database.
  include('paginator.php');
  
  $pages = new Paginator('10','p');
- $pages->set_total('100'); //or a number from say a database
+ $pages->set_total('100'); //or a number of records
  
  //display the records here
  
