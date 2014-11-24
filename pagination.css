@@ -1,7 +1,9 @@
 .pagination {
     clear: both;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding: 0;
+}
+.pagination li {
+	display:inline;
 }
 .pagination a {
     border: 1px solid #D5D5D5;
