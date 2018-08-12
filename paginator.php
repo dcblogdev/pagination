@@ -102,6 +102,17 @@ class Paginator{
 	public function get_limit(){
         	return "LIMIT ".$this->get_start().",$this->_perPage";
         }
+	
+	/**
+     	* get_limit_keys
+     	*
+     	* returns an array of the offset and limit returned on each call
+     	*
+     	* @return string
+    	*/
+    	public function get_limit_keys(){
+        	return ['offset' => $this->get_start(), 'limit' => $this->_perPage];
+    	}
 
         /**
          * page_links
