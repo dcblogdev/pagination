@@ -38,7 +38,7 @@ The method also allows you to pass in extra data such as a series of GET's
 echo $pages->page_links('?','&status='.$_GET['status'].'&active='.$_GET['active']);
 ```` 
  
-##Database example
+## Database example
 
 ````php
 //include the class
@@ -48,8 +48,8 @@ include('paginator.php');
 $pages = new Paginator('10','p');
 
 //get number of total records
-$rows = $db->query('SELECT id FROM table');
-$total = count($rows);
+$stmt = $db->query('SELECT id FROM table');
+$total = $stmt->rowCount();
 
 //pass number of records to
 $pages->set_total($total); 
@@ -63,7 +63,7 @@ foreach($data as $row) {
 echo $pages->page_links();
 ````
 
-##MVC example
+## MVC example
 
 using this class in an MVC environment its almost the same, only the database or dataset calls come from the model instead of the page directly.
 
