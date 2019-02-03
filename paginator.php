@@ -42,6 +42,13 @@ class Paginator{
 	 * @var numeric
 	*/
 	private $_totalRows = 0;
+	
+	/**
+	 * set custom css classes for additional flexibility
+	 *
+	 * @var sting
+	*/
+	private $_customCSS;
 
 
 
@@ -53,10 +60,11 @@ class Paginator{
 	 * @param numeric  $_perPage  sets the number of iteems per page
 	 * @param numeric  $_instance sets the instance for the GET parameter
 	 */
-	public function __construct($perPage,$instance){
+	public function __construct($perPage, $instance, $customCSS = ''){
 		$this->_instance = $instance;		
 		$this->_perPage = $perPage;
-		$this->set_instance();		
+		$this->set_instance();
+		$this->_customCSS = $customCSS;	
 	}
 
 	/**
@@ -134,7 +142,7 @@ class Paginator{
 	    $pagination = "";
 		if($lastpage > 1)
 		{   
-		    $pagination .= "<ul class='pagination'>";
+		    $pagination .= "<ul class='pagination ".$this->_customCSS."'>";
 		if ($this->_page > 1)
 		    $pagination.= "<li><a href='".$path."$this->_instance=$prev"."$ext'>Previous</a></li>";
 		else
